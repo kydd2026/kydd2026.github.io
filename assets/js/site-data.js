@@ -441,6 +441,7 @@ window.KYDD_DATA = (function () {
 
     /* Doğrulanmış program konuşmacıları; kaynaklar README'de. */
     "İskender Salih Çevik": "assets/kisiler/iskender-salih-cevik.jpg",
+    "Merve Yıldız Güler": "assets/kisiler/merve-yildiz-guler.jpg",
     "Mevlüt Soluk": "assets/kisiler/mevlut-soluk.jpg",
     "Anıl Doğuş": "assets/kisiler/anil-dogus.jpg",
 

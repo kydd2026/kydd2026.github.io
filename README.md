@@ -82,18 +82,19 @@ içerik yine okunur.
 
 `site-data.js` içindeki `PHOTOS` sözlüğü, kişi adını fotoğraf adresine
 eşler. Fotoğrafların çoğu kurumların veya etkinlik düzenleyicilerinin
-sunucularından çekilir. Doğrulanan üç program konuşmacısının fotoğrafı
+sunucularından çekilir. Doğrulanan dört program konuşmacısının fotoğrafı
 bağlantıların kırılmaması için `assets/kisiler/` altında tutulur.
 
 - Yeni konuşmacı fotoğrafları TALSAD yönetim, TTGV takım, Some Carbon ve
   Globuc konuşmacı sayfalarındaki isimli görsellerden alındı. Kimliği
   doğrulanamayan kişilere rastgele bir görsel konmadı.
 - İskender Salih Çevik görseli [kendi Knowhy ekip paylaşımından](https://tr.linkedin.com/posts/icevik1_knowhy-yapayzeka-startup-activity-7335181907732619264-2bvt),
+  Merve Yıldız Güler portresi [TİM ve FIATA geçmişiyle eşleşen LinkedIn profilinden](https://tr.linkedin.com/in/merveyildizguler),
   Mevlüt Soluk görseli [TÜRKÇİMENTO'nun isimli seminer paylaşımından](https://tr.linkedin.com/posts/turkcimento_t%C3%BCrk%C3%A7i%CC%87mento-%C3%A7evre-ve-i%CC%87klim-de%C4%9Fi%C5%9Fikli%C4%9Fi-uzman%C4%B1-activity-7463233401752494080-T59G),
   Anıl Doğuş portresi [ESCON ile eşleşen LinkedIn profilinden](https://tr.linkedin.com/in/an%C4%B1l-do%C4%9Fu%C5%9F-2b5012148)
   alınarak yerel dosyaya kaydedildi.
-- Merve Yıldız Güler ve Emin Gülüsoy için kişiye güvenle bağlanabilen
-  portre bulunamadı; bu iki kart baş harf avatarı gösterir.
+- Emin Gülüsoy için kişiye güvenle bağlanabilen portre bulunamadı; kartı
+  baş harf avatarı gösterir.
 - `PHOTOS` içinde olmayan herkes, adının baş harflerinden üretilen renkli
   bir avatarla gösterilir.
 - Bir bağlantı ileride kırılırsa `onerror` ile yine avatara düşer; sayfada
