@@ -1557,12 +1557,7 @@ hr {
   font-size: 1.5rem;
 }
 
-/* Ekip ve etkinlik karelerinde konuşmacıyı avatar içinde öne çıkar. */
-#speaker-cevik .avatar img {
-  transform: translate(-55px, -28px) scale(2.5);
-  transform-origin: 57% 32%;
-}
-
+/* Etkinlik karesinde konuşmacıyı avatar içinde öne çıkar. */
 #speaker-soluk .avatar img {
   transform: scale(6.5);
   transform-origin: 21% 62%;

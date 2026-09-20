@@ -27,12 +27,12 @@ window.KYDD_DATA = (function () {
     startsAt: "2026-09-21T09:00:00+03:00",
     endsAt: "2026-09-21T17:40:00+03:00",
 
-    venueName: "Yeditepe Üniversitesi Rektörlük Binası",
-    venueHall: "Mario Levi Salonu (Yeşil Salon)",
+    venueName: "Yeditepe Üniversitesi Güzel Sanatlar Fakültesi",
+    venueHall: "Konferans Salonu",
     venueAddress: "İnönü Mahallesi, Kayışdağı Cd., 34755 Ataşehir / İstanbul",
     venueCity: "İstanbul",
     mapQuery:
-      "Yeditepe Üniversitesi Rektörlük Binası, İnönü Mahallesi, Kayışdağı Cd., 34755 Ataşehir/İstanbul",
+      "Yeditepe Üniversitesi Güzel Sanatlar Fakültesi Konferans Salonu, 26 Ağustos Yerleşimi, Ataşehir/İstanbul",
 
     attendance: "Ücretsiz",
     attendanceNote: "Katılım sertifikalıdır",
@@ -51,10 +51,10 @@ window.KYDD_DATA = (function () {
     abstractEmailHref: "mailto:kubra.akben@yeditepe.edu.tr",
     center: "Yeditepe Üniversitesi Karbon Çözümleri Uygulama ve Araştırma Merkezi",
 
-    // Tanıtım afişi (900x1600)
-    poster: "assets/kydd2026-afis.jpeg",
+    // Güncel salon bilgisini taşıyan tanıtım afişi (941x1672)
+    poster: "assets/kydd2026-afis-guncel.png",
     posterAlt:
-      "KYDD 2026 Çalıştayı tanıtım afişi — 21 Eylül 2026, Yeditepe Üniversitesi Rektörlük Binası, Mario Levi Salonu"
+      "KYDD 2026 Çalıştayı tanıtım afişi — 21 Eylül 2026, Yeditepe Üniversitesi Güzel Sanatlar Fakültesi Konferans Salonu"
   };
 
   /* --- Menü ------------------------------------------------------------ */
@@ -440,7 +440,6 @@ window.KYDD_DATA = (function () {
       "https://www.someco2.com/SerhatcanBayar.jpg",
 
     /* Doğrulanmış program konuşmacıları; kaynaklar README'de. */
-    "İskender Salih Çevik": "assets/kisiler/iskender-salih-cevik.jpg",
     "Merve Yıldız Güler": "assets/kisiler/merve-yildiz-guler.jpg",
     "Mevlüt Soluk": "assets/kisiler/mevlut-soluk.jpg",
     "Anıl Doğuş": "assets/kisiler/anil-dogus.jpg",

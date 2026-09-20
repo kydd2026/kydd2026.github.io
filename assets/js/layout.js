@@ -293,7 +293,7 @@ window.KYDD = (function (D) {
       '<figure class="poster">' +
       '<a class="poster__frame" href="' + esc(e.poster) + '" target="_blank" rel="noopener noreferrer">' +
       '<img src="' + esc(e.poster) + '" alt="' + esc(e.posterAlt) + '"' +
-      ' width="900" height="1600" loading="lazy" decoding="async">' +
+      ' width="941" height="1672" loading="lazy" decoding="async">' +
       "</a>" +
       (withCaption
         ? '<figcaption class="poster__caption">Afişi büyütmek için tıklayın</figcaption>'

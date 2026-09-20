@@ -11,13 +11,14 @@ bir web sunucusuna kopyalandığında çalışır.
 |---|---|
 | Tarih | 21 Eylül 2026, Pazartesi |
 | Saat | 09.00 – 17.40 |
-| Yer | Yeditepe Üniversitesi Rektörlük Binası, Mario Levi Salonu (Yeşil Salon) |
+| Yer | Yeditepe Üniversitesi Güzel Sanatlar Fakültesi Konferans Salonu |
 | Adres | İnönü Mah., Kayışdağı Cd., 34755 Ataşehir / İstanbul |
 | Katılım | Ücretsiz, katılım sertifikalı, kontenjan sınırlı |
 | Düzenleyen | Yeditepe Üniversitesi Karbon Çözümleri Uygulama ve Araştırma Merkezi |
 
-Etkinlik yeri ve katılım bilgileri tanıtım afişinden; gün akışı ve bitiş saati
-`assets/KYDD-2026-Program.pdf` dosyasından alınmıştır.
+Etkinlik yeri düzenleyicinin güncel bilgisinden, katılım bilgileri tanıtım
+afişinden; gün akışı ve bitiş saati `assets/KYDD-2026-Program.pdf`
+dosyasından alınmıştır.
 
 ## Yapı
 
@@ -29,7 +30,8 @@ konusmacilar.html   Program konuşmacıları ve kurullar
 kayit.html          Kayıt formu + SSS
 iletisim.html       İletişim formu + adres + harita
 assets/
-  kydd2026-afis.jpeg  Tanıtım afişi, hero görseli         (900x1600)
+  kydd2026-afis-guncel.png  Güncel salonlu tanıtım afişi      (941x1672)
+  kydd2026-afis.jpeg        İlk tanıtım afişi (arşiv)         (900x1600)
   bakanlik-logo.jpg   T.C. Sanayi ve Teknoloji Bakanlığı  (1349x438)
   yeditepe-logo.png   Yeditepe Üniversitesi               (600x600)
   istka-logo.png      İstanbul Kalkınma Ajansı            (530x383)
@@ -82,14 +84,13 @@ içerik yine okunur.
 
 `site-data.js` içindeki `PHOTOS` sözlüğü, kişi adını fotoğraf adresine
 eşler. Fotoğrafların çoğu kurumların veya etkinlik düzenleyicilerinin
-sunucularından çekilir. Doğrulanan dört program konuşmacısının fotoğrafı
+sunucularından çekilir. Doğrulanan üç program konuşmacısının fotoğrafı
 bağlantıların kırılmaması için `assets/kisiler/` altında tutulur.
 
 - Yeni konuşmacı fotoğrafları TALSAD yönetim, TTGV takım, Some Carbon ve
   Globuc konuşmacı sayfalarındaki isimli görsellerden alındı. Kimliği
   doğrulanamayan kişilere rastgele bir görsel konmadı.
-- İskender Salih Çevik görseli [kendi Knowhy ekip paylaşımından](https://tr.linkedin.com/posts/icevik1_knowhy-yapayzeka-startup-activity-7335181907732619264-2bvt),
-  Merve Yıldız Güler portresi [TİM ve FIATA geçmişiyle eşleşen LinkedIn profilinden](https://tr.linkedin.com/in/merveyildizguler),
+- Merve Yıldız Güler portresi [TİM ve FIATA geçmişiyle eşleşen LinkedIn profilinden](https://tr.linkedin.com/in/merveyildizguler),
   Mevlüt Soluk görseli [TÜRKÇİMENTO'nun isimli seminer paylaşımından](https://tr.linkedin.com/posts/turkcimento_t%C3%BCrk%C3%A7i%CC%87mento-%C3%A7evre-ve-i%CC%87klim-de%C4%9Fi%C5%9Fikli%C4%9Fi-uzman%C4%B1-activity-7463233401752494080-T59G),
   Anıl Doğuş portresi [ESCON ile eşleşen LinkedIn profilinden](https://tr.linkedin.com/in/an%C4%B1l-do%C4%9Fu%C5%9F-2b5012148)
   alınarak yerel dosyaya kaydedildi.
