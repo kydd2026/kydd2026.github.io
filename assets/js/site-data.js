@@ -439,6 +439,11 @@ window.KYDD_DATA = (function () {
     "Serhat Can Bayar":
       "https://www.someco2.com/SerhatcanBayar.jpg",
 
+    /* Doğrulanmış program konuşmacıları; kaynaklar README'de. */
+    "İskender Salih Çevik": "assets/kisiler/iskender-salih-cevik.jpg",
+    "Mevlüt Soluk": "assets/kisiler/mevlut-soluk.jpg",
+    "Anıl Doğuş": "assets/kisiler/anil-dogus.jpg",
+
     /* --- LinkedIn profil fotoğrafları --------------------------------------
        Aşağıdaki adresler proje ekibi tarafından verildi ve kurum sayfalarında
        fotoğrafı bulunmayan kişiler için kullanılıyor.

@@ -81,21 +81,26 @@ içerik yine okunur.
 ## Kişi fotoğrafları
 
 `site-data.js` içindeki `PHOTOS` sözlüğü, kişi adını fotoğraf adresine
-eşler. Konuşmacı ve komite fotoğrafları kurumların veya etkinlik
-düzenleyicilerinin sunucularından doğrudan çekilir; projeye kopyalanmaz.
+eşler. Fotoğrafların çoğu kurumların veya etkinlik düzenleyicilerinin
+sunucularından çekilir. Doğrulanan üç program konuşmacısının fotoğrafı
+bağlantıların kırılmaması için `assets/kisiler/` altında tutulur.
 
 - Yeni konuşmacı fotoğrafları TALSAD yönetim, TTGV takım, Some Carbon ve
   Globuc konuşmacı sayfalarındaki isimli görsellerden alındı. Kimliği
   doğrulanamayan kişilere rastgele bir görsel konmadı.
+- İskender Salih Çevik görseli [kendi Knowhy ekip paylaşımından](https://tr.linkedin.com/posts/icevik1_knowhy-yapayzeka-startup-activity-7335181907732619264-2bvt),
+  Mevlüt Soluk görseli [TÜRKÇİMENTO'nun isimli seminer paylaşımından](https://tr.linkedin.com/posts/turkcimento_t%C3%BCrk%C3%A7i%CC%87mento-%C3%A7evre-ve-i%CC%87klim-de%C4%9Fi%C5%9Fikli%C4%9Fi-uzman%C4%B1-activity-7463233401752494080-T59G),
+  Anıl Doğuş portresi [ESCON ile eşleşen LinkedIn profilinden](https://tr.linkedin.com/in/an%C4%B1l-do%C4%9Fu%C5%9F-2b5012148)
+  alınarak yerel dosyaya kaydedildi.
+- Merve Yıldız Güler ve Emin Gülüsoy için kişiye güvenle bağlanabilen
+  portre bulunamadı; bu iki kart baş harf avatarı gösterir.
 - `PHOTOS` içinde olmayan herkes, adının baş harflerinden üretilen renkli
   bir avatarla gösterilir.
 - Bir bağlantı ileride kırılırsa `onerror` ile yine avatara düşer; sayfada
   kırık görsel çıkmaz.
 
-**Hotlink'in riski:** kurumlar dosya yolunu değiştirirse o fotoğraflar
-sessizce avatara döner. Kalıcı çözüm için fotoğrafları (izin alarak)
-`assets/kisiler/` altına indirip `PHOTOS` adreslerini yerel yollarla
-değiştirin.
+**Hotlink'in riski:** dış kaynaklar dosya yolunu değiştirirse o fotoğraflar
+sessizce avatara döner. Yerel görseller bu riski taşımaz.
 
 ## Yayındaki adres
 
