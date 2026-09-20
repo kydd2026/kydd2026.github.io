@@ -10,21 +10,22 @@ bir web sunucusuna kopyalandığında çalışır.
 | | |
 |---|---|
 | Tarih | 21 Eylül 2026, Pazartesi |
-| Saat | 09.00 – 18.00 |
+| Saat | 09.00 – 17.40 |
 | Yer | Yeditepe Üniversitesi Rektörlük Binası, Mario Levi Salonu (Yeşil Salon) |
 | Adres | İnönü Mah., Kayışdağı Cd., 34755 Ataşehir / İstanbul |
 | Katılım | Ücretsiz, katılım sertifikalı, kontenjan sınırlı |
 | Düzenleyen | Yeditepe Üniversitesi Karbon Çözümleri Uygulama ve Araştırma Merkezi |
 
-Bilgiler 3 Eylül 2026 tarihli tanıtım afişinden alınmıştır.
+Etkinlik yeri ve katılım bilgileri tanıtım afişinden; gün akışı ve bitiş saati
+`assets/KYDD-2026-Program.pdf` dosyasından alınmıştır.
 
 ## Yapı
 
 ```
 index.html          Ana sayfa (hero + geri sayım + hakkında + odak alanları +
                     program önizleme + sayılarla + komiteler + SSS + kayıt CTA)
-program.html        Tam gün akış (taslak)
-konusmacilar.html   Yer tutucu + bildiri çağrısı + kurullar
+program.html        Tam gün akış ve indirilebilir program PDF'i
+konusmacilar.html   Program konuşmacıları ve kurullar
 kayit.html          Kayıt formu + SSS
 iletisim.html       İletişim formu + adres + harita
 assets/
@@ -32,6 +33,7 @@ assets/
   bakanlik-logo.jpg   T.C. Sanayi ve Teknoloji Bakanlığı  (1349x438)
   yeditepe-logo.png   Yeditepe Üniversitesi               (600x600)
   istka-logo.png      İstanbul Kalkınma Ajansı            (530x383)
+  KYDD-2026-Program.pdf  Programın indirilebilir kopyası
   css/style.css       tek ortak stil dosyası
   js/site-data.js     TÜM İÇERİK VERİSİ — düzenlenecek tek dosya
   js/layout.js        veriden HTML üretir (menü, alt bilgi, listeler)
@@ -55,6 +57,7 @@ Bu dosyada şunlar durur ve sayfalara otomatik yansır:
 | "Karbonun yolculuğu" süreç şeması | `process` |
 | Afiş görseli | `event.poster` |
 | Program akışı | `program.items` |
+| Konuşmacılar | `speakers` |
 | Komite üyeleri | `committees` |
 | Kişi fotoğrafları | `PHOTOS` (isimden eşleşir) |
 | Sıkça sorulan sorular | `faq` |
@@ -75,15 +78,15 @@ HTML tarafında veri şu iki yolla kullanılır:
 kapalıyken menüsüz görünür. Sayfa metinleri HTML'de statik durduğundan
 içerik yine okunur.
 
-## Komite fotoğrafları
+## Kişi fotoğrafları
 
 `site-data.js` içindeki `PHOTOS` sözlüğü, kişi adını fotoğraf adresine
-eşler. Fotoğraflar **kişilerin kendi kurumlarının sunucularından doğrudan
-çekilir** (hotlink); projeye kopyalanmaz.
+eşler. Konuşmacı ve komite fotoğrafları kurumların veya etkinlik
+düzenleyicilerinin sunucularından doğrudan çekilir; projeye kopyalanmaz.
 
-- Bir fotoğraf yalnızca kişinin **kurumunun resmî profil sayfasında**
-  görüldüyse eklenmiştir. Kimliği doğrulanamayan hiç kimseye internetten
-  bulunmuş bir görsel konmamıştır.
+- Yeni konuşmacı fotoğrafları TALSAD yönetim, TTGV takım, Some Carbon ve
+  Globuc konuşmacı sayfalarındaki isimli görsellerden alındı. Kimliği
+  doğrulanamayan kişilere rastgele bir görsel konmadı.
 - `PHOTOS` içinde olmayan herkes, adının baş harflerinden üretilen renkli
   bir avatarla gösterilir.
 - Bir bağlantı ileride kırılırsa `onerror` ile yine avatara düşer; sayfada
@@ -121,10 +124,6 @@ Ardından http://127.0.0.1:8000 adresini açın. Dosyaya çift tıklayarak açma
 - [ ] **Form `action` adreslerini bağlayın.** `kayit.html` ve `iletisim.html`
       içindeki `<form action="">` boş. Boş kaldığı sürece `main.js` formu
       göndermez, sadece alanları doğrular ve bilgi mesajı gösterir.
-- [ ] Program kesinleştiğinde `site-data.js` → `program.items` güncellenip
-      `program.draft` `false` yapılmalı; PDF bağlantısı eklenmeli.
-- [ ] Davetli konuşmacılar kesinleştiğinde `konusmacilar.html` yer tutucusu
-      değiştirilmeli.
 - [ ] KVKK aydınlatma metni yazıldığında formlardaki onay kutusu etiketine
       bağlantı eklenmeli (`kayit.html`, `iletisim.html` — `#kvkk` alanı).
 - [ ] Afişteki **Yeditepe 30. yıl** ve **KARBON merkezi** logoları dosya olarak

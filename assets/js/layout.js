@@ -303,6 +303,28 @@ window.KYDD = (function (D) {
   }
 
   /* --- Program ---------------------------------------------------------- */
+  function speakerById(id) {
+    for (var i = 0; i < D.speakers.length; i++) {
+      if (D.speakers[i].id === id) return D.speakers[i];
+    }
+    return null;
+  }
+
+  function programPeople(ids, label) {
+    if (!ids || !ids.length) return "";
+    return (
+      '<span class="timeline__people"><strong>' + esc(label) + '</strong> ' +
+      ids.map(function (id) {
+        var person = speakerById(id);
+        return person
+          ? '<span class="timeline__person"><a href="konusmacilar.html#speaker-' + esc(id) + '">' + esc(person.name) + '</a>' +
+            (label === "Panelistler:" ? ' <small>' + esc(person.org) + '</small>' : "") + '</span>'
+          : "";
+      }).filter(Boolean).join('') +
+      '</span>'
+    );
+  }
+
   function programHTML(limit) {
     var items = D.program.items.slice(0, limit || D.program.items.length);
     return items
@@ -317,7 +339,9 @@ window.KYDD = (function (D) {
           '<span class="timeline__time">' + esc(p.time) + "</span>" +
           '<span class="timeline__body">' +
           '<span class="timeline__title">' + esc(p.title) + "</span>" +
-          (p.desc ? '<span class="timeline__desc">' + esc(p.desc) + "</span>" : "") +
+          (!limit && p.moderators ? programPeople(p.moderators, "Moderatörler:") : "") +
+          (!limit && p.speakers ? programPeople(p.speakers, p.moderators ? "Panelistler:" : p.speakers.length > 1 ? "Konuşmacılar:" : "Konuşmacı:") : "") +
+          (!limit && p.detail ? '<span class="timeline__desc">' + esc(p.detail) + "</span>" : "") +
           tag +
           "</span></li>"
         );
@@ -372,6 +396,20 @@ window.KYDD = (function (D) {
       fallback +
       "</span>"
     );
+  }
+
+  function speakersHTML() {
+    return '<div class="speaker-grid">' + D.speakers.map(function (s) {
+      return (
+        '<article class="speaker-card reveal" id="speaker-' + esc(s.id) + '">' +
+        avatarHTML(s) +
+        '<div class="speaker-card__body">' +
+        '<span class="speaker-card__role">' + esc(s.role) + '</span>' +
+        '<h3>' + esc(s.name) + '</h3>' +
+        '<p>' + esc(s.org) + '</p>' +
+        '</div></article>'
+      );
+    }).join('') + '</div>';
   }
 
   /* --- Komiteler -------------------------------------------------------- */
@@ -453,7 +491,7 @@ window.KYDD = (function (D) {
       { num: counts.bilim || 0, label: "Bilim Kurulu üyesi" },
       { num: counts.organizasyon || 0, label: "Organizasyon Komitesi üyesi" },
       { num: D.topics.length, label: "Odak alanı" },
-      { num: 1, label: "Tam gün, 9 saat program" }
+      { num: 1, label: "Tam gün program" }
     ];
 
     return stats
@@ -496,6 +534,16 @@ window.KYDD = (function (D) {
     mount("topics", topicsHTML());
     mount("process", processHTML());
     mount("committees", committeeTabsHTML() + committeesHTML());
+    mount("speakers", speakersHTML());
+    if (window.location.hash.indexOf("#speaker-") === 0) {
+      var target = document.getElementById(window.location.hash.slice(1));
+      if (target) {
+        target.classList.add("is-visible");
+        window.setTimeout(function () {
+          target.scrollIntoView({ behavior: "instant", block: "start" });
+        }, 100);
+      }
+    }
     mount("faq", faqHTML());
     mount("stats", statsHTML());
     mount("poster", posterHTML(false));

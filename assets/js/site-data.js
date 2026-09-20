@@ -22,10 +22,10 @@ window.KYDD_DATA = (function () {
     project: "İkiz Dönüşüm Yoluyla Endüstriyel Dekarbonizasyon",
 
     dateText: "21 Eylül 2026, Pazartesi",
-    timeText: "09.00 – 18.00",
+    timeText: "09.00 – 17.40",
     // Geri sayım hedefi (Europe/Istanbul, UTC+03:00)
     startsAt: "2026-09-21T09:00:00+03:00",
-    endsAt: "2026-09-21T18:00:00+03:00",
+    endsAt: "2026-09-21T17:40:00+03:00",
 
     venueName: "Yeditepe Üniversitesi Rektörlük Binası",
     venueHall: "Mario Levi Salonu (Yeşil Salon)",
@@ -161,74 +161,130 @@ window.KYDD_DATA = (function () {
     }
   ];
 
-  /* --- Program taslağı -------------------------------------------------- */
-  /* Saatler afişteki 09.00–18.00 çerçevesine göre taslaktır; oturum
-     başlıkları kesinleştikçe burayı güncelleyin ve draft:false yapın. */
+  /* --- 21 Eylül 2026 programı (KYDD 2026 Program.pdf) ------------------ */
   var program = {
-    draft: true,
+    draft: false,
     items: [
       {
-        time: "09.00 – 09.30",
-        title: "Kayıt ve karşılama",
-        desc: "Katılımcı kayıt masası, yaka kartı dağıtımı ve karşılama ikramı.",
+        time: "09.00 – 10.00",
+        title: "Kayıt ve Tanışma Etkinliği",
         tag: "Kayıt",
         type: "break"
       },
       {
-        time: "09.30 – 10.15",
-        title: "Açılış konuşmaları",
-        desc: "Yeditepe Üniversitesi, İstanbul Kalkınma Ajansı ve proje ekibi açılış konuşmaları."
+        time: "10.00 – 10.20",
+        title: "Açılış Konuşmaları",
+        tag: "Açılış"
       },
       {
-        time: "10.15 – 11.15",
-        title: "Davetli konuşmacı oturumu I",
-        desc: "COP31 yolunda Türkiye'nin dekarbonizasyon gündemi."
+        time: "10.20 – 10.40",
+        title: "IDEC-TT Projesi: YUKARBON Eğitim Platformu ve KarbonBot Tanıtımı",
+        speakers: ["akben", "cevik"],
+        tag: "Proje Tanıtımı"
       },
       {
-        time: "11.15 – 11.30",
-        title: "Kahve arası",
+        time: "10.40 – 10.50",
+        title: "Kahve Arası",
         tag: "Ara",
         type: "break"
       },
       {
-        time: "11.30 – 12.30",
-        title: "Oturum: Karbon yakalama ve değerlendirme",
-        desc: "Akademi ve sanayiden teknoloji sunumları."
+        time: "10.50 – 11.30",
+        title: "Karbon Yoğun Sektörlerde Rekabetçiliğin Yeni Dinamikleri: Sektörel Örneklerle Döngüsel Üretim ve Kaynak Verimliliği",
+        tag: "YUKARBON Eğitim Modülü 1",
+        speakers: ["akben"],
+        detail: "Sektörel uygulama: Çelik ve çimento sektörlerinde düşük karbonlu dönüşüm yol haritaları."
       },
       {
-        time: "12.30 – 13.30",
-        title: "Öğle arası",
+        time: "11.30 – 12.10",
+        title: "Ürün Yaşam Döngüsü ve Düşük Karbonlu Tasarım",
+        tag: "YUKARBON Eğitim Modülü 2",
+        speakers: ["turan"],
+        detail: "Sektörel uygulama: Alüminyum sanayisinde kaynak verimliliği ve düşük karbonlu dönüşüm yol haritaları."
+      },
+      {
+        time: "12.10 – 13.30",
+        title: "Öğle Arası",
         tag: "Ara",
         type: "break"
       },
       {
-        time: "13.30 – 14.45",
-        title: "Oturum: Kaynak verimliliği ve ikiz dönüşüm",
-        desc: "Endüstriyel simbiyoz, dijital karbon izleme ve verimlilik uygulamaları."
+        time: "13.30 – 14.10",
+        title: "Döngüsel Ekonomi ve AB Anahtar Ürün Değer Zincirlerinde Yatırım Kararları: Maliyet Analizi, Finansal Fizibilite ve Finansman Mekanizmaları",
+        tag: "YUKARBON Eğitim Modülü 3",
+        speakers: ["aydeniz"]
       },
       {
-        time: "14.45 – 15.00",
-        title: "Kahve arası",
+        time: "14.10 – 14.50",
+        title: "Tüketici ve Kamu Alıcılarının Güçlendirilmesi, Yeşil Dönüşümün Sosyal Etkileri",
+        tag: "YUKARBON Eğitim Modülü 4",
+        speakers: ["ural"]
+      },
+      {
+        time: "14.50 – 15.00",
+        title: "Ara",
         tag: "Ara",
         type: "break"
       },
       {
-        time: "15.00 – 16.15",
-        title: "Oturum: Depolama ve politika çerçevesi",
-        desc: "Jeolojik depolama, mevzuat ve teşvik mekanizmaları."
+        time: "15.00 – 15.50",
+        title: "COP31'e Doğru Türkiye Sanayisinde Düşük Karbonlu Dönüşüm ve Kaynak Verimliliği",
+        tag: "Panel",
+        moderators: ["aydeniz", "akben"],
+        speakers: ["saymen", "guler", "gurel", "soluk", "dogus"]
       },
       {
-        time: "16.15 – 17.30",
-        title: "Panel: Üniversite–sanayi iş birliği",
-        desc: "Ortak proje geliştirme ve finansman olanakları üzerine tartışma."
+        time: "15.50 – 16.00",
+        title: "Ara",
+        tag: "Ara",
+        type: "break"
       },
       {
-        time: "17.30 – 18.00",
-        title: "Değerlendirme, kapanış ve sertifika takdimi",
+        time: "16.00 – 16.20",
+        title: "Dr. Bilal Guliyev – Genel Müdür / SOCAR Türkiye",
+        speakers: ["guliyev"]
+      },
+      {
+        time: "16.20 – 16.40",
+        title: "Karbonsuzlaştırma Çözümlerinde KYKD Teknolojileri: Karbon Yakalama, Kullanım ve Depolama Uygulamaları ve Zorlukları",
+        speakers: ["bayar"]
+      },
+      {
+        time: "16.40 – 17.00",
+        title: "Seramik Sektöründe Atıksularla Karbon Yakalama ve Kullanma",
+        speakers: ["gulusoy", "sahin"]
+      },
+      {
+        time: "17.00 – 17.20",
+        title: "Daha Uzun Ömürlü Yapılar: Düşük Karbonlu ve Kaynak Verimli Bir Gelecek için Yenilikçi Yapı Malzemeleri",
+        speakers: ["erson"]
+      },
+      {
+        time: "17.20 – 17.40",
+        title: "Genel Değerlendirme ve Kapanış",
         tag: "Kapanış"
       }
     ]
   };
+
+  /* Programdaki kişiler ilk göründükleri sırayla listelenir. */
+  var speakers = [
+    { id: "akben", name: "Dr. Öğr. Üyesi Hatice Kübra Akben", org: "Yeditepe Üniversitesi", role: "Eğitmen · Panel moderatörü" },
+    { id: "cevik", name: "İskender Salih Çevik", org: "Knowhy.co", role: "Genel Müdür · Proje tanıtımı" },
+    { id: "turan", name: "Doç. Dr. Ahmet Turan", org: "Yeditepe Üniversitesi", role: "Eğitmen" },
+    { id: "aydeniz", name: "Prof. Dr. Şule Aydeniz", org: "Yeditepe Üniversitesi", role: "Eğitmen · Panel moderatörü" },
+    { id: "ural", name: "Prof. Dr. Tülin Ural", org: "Yeditepe Üniversitesi", role: "Eğitmen" },
+    { id: "saymen", name: "Duygu Saymen", org: "TALSAD", role: "Genel Sekreter · Panelist" },
+    { id: "guler", name: "Merve Yıldız Güler", org: "TİM", role: "Genel Sekreter Yardımcısı · Panelist" },
+    { id: "gurel", name: "Dr. Güniz Gürel", org: "TTGV", role: "İklim Teknolojileri Uzmanı · Panelist" },
+    { id: "soluk", name: "Mevlüt Soluk", org: "TÜRKÇİMENTO", role: "Çevre ve İklim Teknolojileri Uzmanı · Panelist" },
+    { id: "dogus", name: "Anıl Doğuş", org: "ESCON Enerji A.Ş.", role: "Panelist" },
+    { id: "guliyev", name: "Dr. Bilal Guliyev", org: "SOCAR Türkiye", role: "Genel Müdür · Konuşmacı" },
+    { id: "bayar", name: "Serhat Can Bayar", org: "Some Carbon Enerji", role: "Kurucu / Operasyon Takım Lideri · Konuşmacı" },
+    { id: "gulusoy", name: "Emin Gülüsoy", org: "İstanbul Üniversitesi-Cerrahpaşa", role: "Konuşmacı" },
+    { id: "sahin", name: "Prof. Dr. Ülkü Alver Şahin", org: "İstanbul Üniversitesi-Cerrahpaşa", role: "Konuşmacı" },
+    { id: "erson", name: "Doç. Dr. Ali Rıza Erson", org: "Yeditepe Üniversitesi", role: "Konuşmacı" }
+  ];
 
   /* --- Komiteler -------------------------------------------------------- */
   /* İsimler soyadına göre Türk alfabesi sırasındadır. */
@@ -373,6 +429,16 @@ window.KYDD_DATA = (function () {
     "Prof. Dr. Alper Uzun":
       "https://cdn.ku.edu.tr/auzun.jpg",                 /* Koç Ü. — eng.ku.edu.tr */
 
+    /* Program konuşmacıları: kurumlarının ve etkinlik düzenleyicilerinin sayfaları. */
+    "Duygu Saymen":
+      "https://talsad.org.tr/upload/img/2025/06/VdBU1x4Z0R.png",
+    "Dr. Güniz Gürel":
+      "https://ttgv.org.tr/storage/app/media/kurumsal/takim/3/guniz.png",
+    "Dr. Bilal Guliyev":
+      "https://globuc.com/wp-content/uploads/SOCAR_Bilal_Guliyev-2.png",
+    "Serhat Can Bayar":
+      "https://www.someco2.com/SerhatcanBayar.jpg",
+
     /* --- LinkedIn profil fotoğrafları --------------------------------------
        Aşağıdaki adresler proje ekibi tarafından verildi ve kurum sayfalarında
        fotoğrafı bulunmayan kişiler için kullanılıyor.
@@ -427,6 +493,9 @@ window.KYDD_DATA = (function () {
       if (PHOTOS[m.name]) m.photo = PHOTOS[m.name];
     });
   });
+  speakers.forEach(function (s) {
+    if (PHOTOS[s.name]) s.photo = PHOTOS[s.name];
+  });
 
   /* --- Sıkça sorulan sorular -------------------------------------------- */
   var faq = [
@@ -460,6 +529,7 @@ window.KYDD_DATA = (function () {
     topics: topics,
     process: process,
     program: program,
+    speakers: speakers,
     committees: committees,
     faq: faq
   };
